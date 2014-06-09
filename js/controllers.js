@@ -1,6 +1,6 @@
-var myNameSpace = angular.module("myApp", []);
+var appNameSpace = angular.module("myApp", []);
 
-myNameSpace.controller('MyController', function MyController($scope) {
+appNameSpace.controller('MyController', function MyController($scope) {
     $scope.author = {
         'name': 'Nir Moav',
         'title': 'Wixifier Specialist',
