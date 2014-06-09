@@ -1,5 +1,7 @@
 <section class="artistinfo">
 	<div class="artist cf" ng-model="artist">
+		<a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+		<a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
 		<h1>{{artist.name}}</h1>	
 		<div class="info">
 			<h3>{{artist.reknown}}</h3>

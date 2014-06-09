@@ -15,6 +15,8 @@ artistControllers.controller('DetailsController', ['$scope', '$http', '$routePar
             $scope.artists = data;
             $scope.whichItem = $routeParams.itemId;
             $scope.artist = $scope.artists[$scope.whichItem];
+            $scope.prevItem = Math.max(0, $routeParams.itemId - 1);
+            $scope.nextItem = Math.min($scope.artists.length - 1, $routeParams.itemId + 1);
         });
     }
 ]);
