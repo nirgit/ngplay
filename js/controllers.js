@@ -1,9 +1,10 @@
-var appNameSpace = angular.module("myApp", []);
+var artistControllers = angular.module("artistControllers", []);
 
-appNameSpace.controller('MyController', ['$scope', '$http',
+artistControllers.controller('ListController', ['$scope', '$http',
     function MyController($scope, $http) {
         $http.get('js/data.json').success(function(data) {
             $scope.artists = data;
+            $scope.artistOrder = 'name';
         });
     }
 ]);
