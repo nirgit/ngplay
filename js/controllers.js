@@ -8,3 +8,13 @@ artistControllers.controller('ListController', ['$scope', '$http',
         });
     }
 ]);
+
+artistControllers.controller('DetailsController', ['$scope', '$http', '$routeParams',
+    function DetailsController($scope, $http, $routeParams) {
+        $http.get('js/data.json').success(function(data) {
+            $scope.artists = data;
+            $scope.whichItem = $routeParams.itemId;
+            $scope.artist = $scope.artists[$scope.whichItem];
+        });
+    }
+]);
